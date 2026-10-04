@@ -24,7 +24,7 @@
 
 .chip__label {
   font-family: var(--token-font-default);
-  font-size: 14px;
+  font-size: var(--token-chip-font-size-sm);
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;

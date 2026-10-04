@@ -206,7 +206,7 @@
   --primitive-opacity-100: 100;
 
   /* font */
-  --primitive-font-default:    Inter, sans-serif;
+  --primitive-font-default:    'Open Sans', sans-serif;
   --primitive-font-icon:       'Material Symbols Rounded';
   --primitive-font-icon-brand: 'Font Awesome 7 Brands';
 
