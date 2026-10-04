@@ -18,7 +18,7 @@
 }
 
 .switch__track--on  { background-color: var(--token-status-default); }
-.switch__track--off { background-color: var(--token-text-muted); }
+.switch__track--off { background-color: var(--token-switch-off); }
 
 .switch--disabled .switch__track--on,
 .switch--disabled .switch__track--off { background-color: var(--token-action-disabled); }
@@ -59,4 +59,4 @@
 }
 
 .switch--disabled .switch__label,
-.switch--disabled .switch__subtext { color: var(--token-text-muted); }
+.switch--disabled .switch__subtext { color: var(--token-text-disabled); }

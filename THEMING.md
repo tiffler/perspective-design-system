@@ -11,10 +11,10 @@ primitives.css  ->  component-tokens.css  ->  components
 
 1. Copy `src/styles/themes/_template.css` to `src/styles/themes/<your-name>.css`.
 2. Rename `your-theme` inside the file to `<your-name>` (same as the filename).
-3. Change primitive values. Point the brand scale at another palette, or use your own hex:
+3. Change primitive values. Point the brand scale at another palette, or use your own hex (`brand-600` drives light-mode actions, `brand-300` dark-mode actions):
    ```css
    :root[data-theme="sunset"] {
-     --primitive-brand-500: #ff6b35;
+     --primitive-brand-600: #b8400f;
    }
    ```
 4. Run `pnpm storybook`. Your theme appears in the **Theme** toolbar menu automatically. Use the **Mode** menu to check light and dark.
@@ -37,7 +37,24 @@ Set attributes on `<html>`:
 
 No `data-theme` means the default theme. No `data-mode` means light.
 
-## Figma names
+## Names (Figma and code match)
 
-Primitive names are the Figma variable names with `/` replaced by `-`
-(`colors/purple/500` becomes `--primitive-purple-500`), because `/` isn't valid in a CSS custom property name.
+Code names are derived from the Figma variable names by replacing `/` with `-`:
+
+| Figma | CSS |
+|---|---|
+| `colors/purple/500` | `--primitive-purple-500` (the leading `colors/` is dropped) |
+| `surface/page/default` | `--token-surface-page-default` |
+| `status/multi-tone/danger` | `--token-status-multi-tone-danger` |
+| `input/stroke/focus` | `--token-input-stroke-focus` |
+
+`primitives.css` and `component-tokens.css` are generated from Figma. After changing a variable in Figma, regenerate them; don't hand-edit values in the token file.
+
+## Pairing
+
+Fills that carry text have a named partner. Use them together:
+`action/default` + `text/on-action`, and `status/<name>` + `text/on-status/<name>`.
+
+## Accessibility
+
+After changing a brand color, check contrast. Button text sits on `brand-600` (light) and `brand-300` (dark); both need 4.5:1.

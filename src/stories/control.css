@@ -50,4 +50,4 @@
 }
 
 .control--disabled .control__label,
-.control--disabled .control__subtext { color: var(--token-text-muted); }
+.control--disabled .control__subtext { color: var(--token-text-disabled); }

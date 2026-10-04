@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: var(--token-font-default);
   color: var(--token-text-default);
-  background: var(--token-surface-page);
+  background: var(--token-surface-page-default);
 }
 
 html[data-mode="dark"] {
