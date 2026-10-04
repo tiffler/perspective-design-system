@@ -1,0 +1,14 @@
+/* Example theme: re-brands the system by pointing brand at teal. */
+
+:root[data-theme="teal"] {
+  --primitive-brand-50:  var(--primitive-teal-50);
+  --primitive-brand-100: var(--primitive-teal-100);
+  --primitive-brand-200: var(--primitive-teal-200);
+  --primitive-brand-300: var(--primitive-teal-300);
+  --primitive-brand-400: var(--primitive-teal-400);
+  --primitive-brand-500: var(--primitive-teal-700);
+  --primitive-brand-600: var(--primitive-teal-800);
+  --primitive-brand-700: var(--primitive-teal-800);
+  --primitive-brand-800: var(--primitive-teal-900);
+  --primitive-brand-900: var(--primitive-teal-900);
+}

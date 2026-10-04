@@ -1,0 +1,30 @@
+/* ============================================================
+   Theme template — copy this file, e.g. to themes/sunset.css
+
+   1. Rename "your-theme" below to the same name as the file.
+   2. Change the values you want. Anything you leave out
+      falls back to primitives.css.
+   3. Storybook picks up every file in this folder automatically
+      and adds it to the Theme menu in the toolbar.
+
+   Only override PRIMITIVES (--primitive-*). Never override
+   --token-* here, so light and dark mode both keep working.
+   ============================================================ */
+
+:root[data-theme="your-theme"] {
+
+  /* Brand: point at an existing palette ... */
+  --primitive-brand-50:  var(--primitive-blue-50);
+  --primitive-brand-300: var(--primitive-blue-300);
+  --primitive-brand-400: var(--primitive-blue-400);
+  --primitive-brand-500: var(--primitive-blue-500);
+  --primitive-brand-600: var(--primitive-blue-600);
+  --primitive-brand-900: var(--primitive-blue-900);
+
+  /* ... or use your own hex values */
+  /* --primitive-brand-500: #ff6b35; */
+
+  /* Font */
+  /* --primitive-font-default: 'Your Font', sans-serif; */
+
+}

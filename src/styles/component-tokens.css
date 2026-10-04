@@ -1,55 +1,60 @@
 /* ============================================================
-   Valid CSS custom property aliases for Perspective tokens.
-   The source tokens use slash-separated names (e.g. --text/default)
-   which are not valid CSS identifiers. These hyphenated aliases
-   map to the same values and are safe to use in component CSS.
+   Perspective — TOKENS (layer 2 of 3)
+
+   Every value here is a reference to a primitive
+   (primitives.css), so editing primitives re-themes all of it.
+   Components only ever read --token-* names from this file.
+
+   Two independent switches on <html>:
+     data-theme="<name>"  brand theme (primitive overrides, see themes/)
+     data-mode="dark"     dark mode (this file; light is the default)
    ============================================================ */
 
 /* ── Light mode (default) ── */
 :root {
 
   /* Font */
-  --token-font-default: Inter, sans-serif;
-  --token-font-icon:    'Material Symbols Rounded';
+  --token-font-default: var(--primitive-font-default);
+  --token-font-icon:    var(--primitive-font-icon);
 
   /* Text */
-  --token-text-default:      #050505;
-  --token-text-subtle:       #5c5c64;
-  --token-text-muted:        #83838b;
-  --token-text-on-solid:     #f5f5f5;
-  --token-text-always-white: #ffffff;
-  --token-text-always-black: #000000;
-  --token-text-danger:       #ae0000;
-  --token-text-urgent:       #814a00;
+  --token-text-default:      var(--primitive-neutral-dark-900);
+  --token-text-subtle:       var(--primitive-neutral-dark-50);
+  --token-text-muted:        var(--primitive-neutral-light-700);
+  --token-text-on-solid:     var(--primitive-neutral-light-25);
+  --token-text-always-white: var(--primitive-white);
+  --token-text-always-black: var(--primitive-black);
+  --token-text-danger:       var(--primitive-red-600);
+  --token-text-urgent:       var(--primitive-orange-800);
 
   /* Surface */
-  --token-surface-page:           #ffffff;
-  --token-surface-section-subtle: #f5f5f5;
+  --token-surface-page:           var(--primitive-white);
+  --token-surface-section-subtle: var(--primitive-neutral-light-25);
 
   /* Action */
-  --token-action-default:       #9751c2;
-  --token-action-subtle:        #f6e9fd;
-  --token-action-disabled:      #e9e9ea;
-  --token-action-text-disabled: #83838b;
-  --token-action-danger:        #ae0000;
-  --token-action-warning:       #f79000;
-  --token-action-warning-dark:  #f8a42d;
+  --token-action-default:       var(--primitive-brand-500);
+  --token-action-subtle:        var(--primitive-brand-50);
+  --token-action-disabled:      var(--primitive-neutral-light-100);
+  --token-action-text-disabled: var(--primitive-neutral-light-700);
+  --token-action-danger:        var(--primitive-red-600);
+  --token-action-warning:       var(--primitive-orange-500);
+  --token-action-warning-dark:  var(--primitive-orange-400);
 
   /* Status */
-  --token-status-default:   #7e3fa5;
-  --token-status-danger:    #ae0000;
-  --token-status-running:   #215aef;
-  --token-status-info-dark: #53525a;
-  --token-status-success:   #008109;
-  --token-status-urgent:    #f79000;
+  --token-status-default:   var(--primitive-brand-600);
+  --token-status-danger:    var(--primitive-red-600);
+  --token-status-running:   var(--primitive-blue-500);
+  --token-status-info-dark: var(--primitive-neutral-dark-100);
+  --token-status-success:   var(--primitive-green-700);
+  --token-status-urgent:    var(--primitive-orange-500);
 
   /* Status half-tones */
-  --token-status-ht-default: #f6e9fd;
-  --token-status-ht-danger:  #fce9e9;
-  --token-status-ht-running: #e0eaff;
-  --token-status-ht-info:    #fafafa;
-  --token-status-ht-success: #ecffee;
-  --token-status-ht-urgent:  #fef2e0;
+  --token-status-ht-default: var(--primitive-brand-50);
+  --token-status-ht-danger:  var(--primitive-red-50);
+  --token-status-ht-running: var(--primitive-blue-50);
+  --token-status-ht-info:    var(--primitive-neutral-light-50);
+  --token-status-ht-success: var(--primitive-green-50);
+  --token-status-ht-urgent:  var(--primitive-orange-50);
 
   /* Button */
   --token-button-height:       40px;
@@ -58,8 +63,8 @@
   --token-button-gap:          8px;
   --token-button-radius:       4px;
   --token-button-text-size:    14px;
-  --token-button-solid-text:   #f5f5f5;
-  --token-button-outline-text: #9751c2;
+  --token-button-solid-text:   var(--primitive-neutral-light-25);
+  --token-button-outline-text: var(--primitive-brand-500);
 
   /* Chip */
   --token-chip-padding-h: 8px;
@@ -68,72 +73,72 @@
   /* Input */
   --token-input-padding:       16px;
   --token-input-radius:        8px;
-  --token-input-fill:          #ffffff;
-  --token-input-border:        #bababe;
-  --token-input-border-focus:  #74747c;
-  --token-input-fill-error:    #fce9e9;
-  --token-input-fill-disabled: #e9e9ea;
+  --token-input-fill:          var(--primitive-white);
+  --token-input-border:        var(--primitive-neutral-light-400);
+  --token-input-border-focus:  var(--primitive-neutral-light-800);
+  --token-input-fill-error:    var(--primitive-red-50);
+  --token-input-fill-disabled: var(--primitive-neutral-light-100);
 
   /* Card */
   --token-card-gap:     16px;
   --token-card-padding: 24px;
   --token-card-radius:  16px;
-  --token-card-bg:      #ffffff;
-  --token-card-border:  #e9e9ea;
+  --token-card-bg:      var(--primitive-white);
+  --token-card-border:  var(--primitive-neutral-light-100);
   --token-card-shadow:  0 1px 4px 0 #3333331a;
 
   /* Controls */
-  --token-switch-knob: #ffffff;
+  --token-switch-knob: var(--primitive-white);
 
 }
 
-/* ── Dark mode values ── */
-:root[data-theme="dark"] {
-  --token-text-default:      #f5f5f5;
-  --token-text-subtle:       #9a9aa0;
-  --token-text-muted:        #64646b;
-  --token-text-danger:       #e44d4d;
-  --token-text-urgent:       #f8a42d;
+/* ── Dark mode ── */
+:root[data-mode="dark"] {
+  color-scheme: dark;
 
-  --token-surface-page:           #19181a;
-  --token-surface-section-subtle: #232225;
+  --token-text-default:      var(--primitive-neutral-light-25);
+  --token-text-subtle:       var(--primitive-neutral-light-600);
+  --token-text-muted:        var(--primitive-neutral-light-900);
+  --token-text-danger:       var(--primitive-red-300);
+  --token-text-urgent:       var(--primitive-orange-400);
 
-  --token-action-default:       #cc7cfc;
-  --token-action-subtle:        #38154d;
-  --token-action-disabled:      #37353a;
-  --token-action-text-disabled: #64646b;
-  --token-action-danger:        #e44d4d;
-  --token-action-warning:       #f8a42d;
-  --token-action-warning-dark:  #fab75a;
+  --token-surface-page:           var(--primitive-neutral-dark-700);
+  --token-surface-section-subtle: var(--primitive-neutral-dark-600);
 
-  --token-status-default:   #b166df;
-  --token-status-danger:    #e44d4d;
-  --token-status-running:   #4d7bf2;
-  --token-status-info-dark: #9a9aa0;
-  --token-status-success:   #00d410;
-  --token-status-urgent:    #f8a42d;
+  --token-action-default:       var(--primitive-brand-300);
+  --token-action-subtle:        var(--primitive-brand-900);
+  --token-action-disabled:      var(--primitive-neutral-dark-400);
+  --token-action-text-disabled: var(--primitive-neutral-light-900);
+  --token-action-danger:        var(--primitive-red-300);
+  --token-action-warning:       var(--primitive-orange-400);
+  --token-action-warning-dark:  var(--primitive-orange-300);
 
-  --token-status-ht-default: #38154d;
-  --token-status-ht-danger:  #320101;
-  --token-status-ht-running: #0a1b48;
-  --token-status-ht-info:    #2d2b2f;
-  --token-status-ht-success: #004001;
-  --token-status-ht-urgent:  #5d3500;
+  --token-status-default:   var(--primitive-brand-400);
+  --token-status-danger:    var(--primitive-red-300);
+  --token-status-running:   var(--primitive-blue-400);
+  --token-status-info-dark: var(--primitive-neutral-light-600);
+  --token-status-success:   var(--primitive-green-500);
+  --token-status-urgent:    var(--primitive-orange-400);
 
-  --token-button-solid-text:   #050505;
-  --token-button-outline-text: #cc7cfc;
+  --token-status-ht-default: var(--primitive-brand-900);
+  --token-status-ht-danger:  var(--primitive-red-900);
+  --token-status-ht-running: var(--primitive-blue-900);
+  --token-status-ht-info:    var(--primitive-neutral-dark-500);
+  --token-status-ht-success: var(--primitive-green-900);
+  --token-status-ht-urgent:  var(--primitive-orange-900);
 
-  --token-input-fill:          #2d2b2f;
-  --token-input-border:        #4a494f;
-  --token-input-border-focus:  #9a9aa0;
-  --token-input-fill-error:    #320101;
-  --token-input-fill-disabled: #37353a;
+  --token-button-solid-text:   var(--primitive-neutral-dark-900);
+  --token-button-outline-text: var(--primitive-brand-300);
 
-  --token-switch-knob: #f5f5f5;
+  --token-input-fill:          var(--primitive-neutral-dark-500);
+  --token-input-border:        var(--primitive-neutral-dark-200);
+  --token-input-border-focus:  var(--primitive-neutral-light-600);
+  --token-input-fill-error:    var(--primitive-red-900);
+  --token-input-fill-disabled: var(--primitive-neutral-dark-400);
 
-  /* Card */
-  --token-card-bg:     #232225;
-  --token-card-border: #37353a;
+  --token-switch-knob: var(--primitive-neutral-light-25);
+
+  --token-card-bg:     var(--primitive-neutral-dark-600);
+  --token-card-border: var(--primitive-neutral-dark-400);
   --token-card-shadow: 0 1px 4px 0 #0000001a;
 }
-

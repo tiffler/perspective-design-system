@@ -1,0 +1,166 @@
+/* ============================================================
+   Perspective — PRIMITIVES (layer 1 of 3)
+
+   This is the only file you need to edit to make a new theme.
+   Raw values live here; nothing else in the system holds a color.
+
+     primitives  ->  component-tokens.css (--token-*)  ->  components
+
+   Names are the Figma variable names with "/" replaced by "-"
+   (colors/purple/500 -> --primitive-purple-500), because "/" is
+   not valid in a CSS custom property name.
+
+   To theme without editing this file, copy themes/_template.css
+   and override values under :root[data-theme="your-name"].
+   ============================================================ */
+
+:root {
+
+  /* Neutral Light */
+  --primitive-neutral-light-0:   #ffffff;
+  --primitive-neutral-light-50:  #fafafa;
+  --primitive-neutral-light-100: #e9e9ea;
+  --primitive-neutral-light-200: #d9d9db;
+  --primitive-neutral-light-300: #c9c9cc;
+  --primitive-neutral-light-400: #bababe;
+  --primitive-neutral-light-500: #aaaaaf;
+  --primitive-neutral-light-600: #9a9aa0;
+  --primitive-neutral-light-700: #83838b;
+  --primitive-neutral-light-800: #74747c;
+  --primitive-neutral-light-900: #64646b;
+
+  /* Neutral Dark */
+  --primitive-neutral-dark-50:  #5c5c64;
+  --primitive-neutral-dark-100: #53525a;
+  --primitive-neutral-dark-200: #4a494f;
+  --primitive-neutral-dark-300: #403f45;
+  --primitive-neutral-dark-400: #37353a;
+  --primitive-neutral-dark-500: #2d2b2f;
+  --primitive-neutral-dark-600: #232225;
+  --primitive-neutral-dark-700: #19181a;
+  --primitive-neutral-dark-800: #0f0e10;
+  --primitive-neutral-dark-900: #050505;
+
+  /* Purple */
+  --primitive-purple-50:  #f6e9fd;
+  --primitive-purple-100: #ebcbff;
+  --primitive-purple-200: #dca4ff;
+  --primitive-purple-300: #cc7cfc;
+  --primitive-purple-400: #b166df;
+  --primitive-purple-500: #9751c2;
+  --primitive-purple-600: #7e3fa5;
+  --primitive-purple-700: #662e88;
+  --primitive-purple-800: #4e206b;
+  --primitive-purple-900: #38154d;
+
+  /* Blue */
+  --primitive-blue-50:  #e0eaff;
+  --primitive-blue-100: #d3defc;
+  --primitive-blue-200: #a6bdf9;
+  --primitive-blue-300: #7a9cf5;
+  --primitive-blue-400: #4d7bf2;
+  --primitive-blue-500: #215aef;
+  --primitive-blue-600: #1a48bf;
+  --primitive-blue-700: #173fa7;
+  --primitive-blue-800: #112d78;
+  --primitive-blue-900: #0a1b48;
+
+  /* Green */
+  --primitive-green-50:  #ecffee;
+  --primitive-green-100: #c3ffc7;
+  --primitive-green-200: #99ffa1;
+  --primitive-green-300: #5cfb67;
+  --primitive-green-400: #43ed4f;
+  --primitive-green-500: #00d410;
+  --primitive-green-600: #00af0d;
+  --primitive-green-700: #008109;
+  --primitive-green-800: #006608;
+  --primitive-green-900: #004001;
+
+  /* Teal */
+  --primitive-teal-50:  #e6faf9;
+  --primitive-teal-100: #c2f3f0;
+  --primitive-teal-200: #9eece7;
+  --primitive-teal-300: #7ae5df;
+  --primitive-teal-400: #56ded6;
+  --primitive-teal-500: #32d7cd;
+  --primitive-teal-600: #29bfb6;
+  --primitive-teal-700: #21a69e;
+  --primitive-teal-800: #1a8c85;
+  --primitive-teal-900: #13716c;
+
+  /* Orange */
+  --primitive-orange-50:  #fef2e0;
+  --primitive-orange-100: #fddeb4;
+  --primitive-orange-200: #fbcb87;
+  --primitive-orange-300: #fab75a;
+  --primitive-orange-400: #f8a42d;
+  --primitive-orange-500: #f79000;
+  --primitive-orange-600: #dc7f00;
+  --primitive-orange-700: #b16500;
+  --primitive-orange-800: #814a00;
+  --primitive-orange-900: #5d3500;
+
+  /* Red */
+  --primitive-red-50:  #fce9e9;
+  --primitive-red-100: #f4b3b3;
+  --primitive-red-200: #ec8080;
+  --primitive-red-300: #e44d4d;
+  --primitive-red-400: #e13333;
+  --primitive-red-500: #d90000;
+  --primitive-red-600: #ae0000;
+  --primitive-red-700: #820000;
+  --primitive-red-800: #5e0000;
+  --primitive-red-900: #320101;
+
+  /* Pink */
+  --primitive-pink-50:  #fff0f9;
+  --primitive-pink-100: #ffcded;
+  --primitive-pink-200: #ffabe1;
+  --primitive-pink-300: #fd88d3;
+  --primitive-pink-400: #f162bd;
+  --primitive-pink-500: #cf4a9f;
+  --primitive-pink-600: #ad3682;
+  --primitive-pink-700: #8b2566;
+  --primitive-pink-800: #69174b;
+  --primitive-pink-900: #470c32;
+
+  /* Sizing */
+  --primitive-sizing-4:  4px;
+  --primitive-sizing-8:  8px;
+  --primitive-sizing-16: 16px;
+  --primitive-sizing-24: 24px;
+  --primitive-sizing-48: 48px;
+
+  /* Spacing */
+  --primitive-space-4: 4px;
+  --primitive-space-8: 8px;
+
+  /* Extras — not in Figma yet */
+  --primitive-white:            #ffffff;
+  --primitive-black:            #000000;
+  --primitive-neutral-light-25: #f5f5f5;
+
+  /* ─────────────────────────────────────────────────────────
+     Brand — the scale that drives actions, links and the
+     default status color. Point it at another palette to
+     re-brand the whole system, e.g. for teal:
+       --primitive-brand-500: var(--primitive-teal-500);
+     or give any step its own hex.
+     ───────────────────────────────────────────────────────── */
+  --primitive-brand-50:  var(--primitive-purple-50);
+  --primitive-brand-100: var(--primitive-purple-100);
+  --primitive-brand-200: var(--primitive-purple-200);
+  --primitive-brand-300: var(--primitive-purple-300);
+  --primitive-brand-400: var(--primitive-purple-400);
+  --primitive-brand-500: var(--primitive-purple-500);
+  --primitive-brand-600: var(--primitive-purple-600);
+  --primitive-brand-700: var(--primitive-purple-700);
+  --primitive-brand-800: var(--primitive-purple-800);
+  --primitive-brand-900: var(--primitive-purple-900);
+
+  /* Font */
+  --primitive-font-default: Inter, sans-serif;
+  --primitive-font-icon:    'Material Symbols Rounded';
+
+}
