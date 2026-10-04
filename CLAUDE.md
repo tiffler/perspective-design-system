@@ -46,7 +46,6 @@ To see a token's current value, read `component-tokens.css`. Themes are in `src/
 Token names are the Figma variable names with `/` -> `-`: `--token-surface-page-default`, `--token-status-multi-tone-danger`, `--token-input-stroke-focus`.
 Groups: `--token-text-*`, `--token-surface-*`, `--token-action-*`, `--token-status-*` (and `status-multi-tone-*` tints), `--token-stroke-color-*`, `--token-space-*`, `--token-radius-*`, `--token-font-*`, plus per-component tokens (`--token-button-*`, `--token-input-*`, `--token-chip-*`, `--token-card-*`).
 Pairing: text on a fill uses its partner: `text-on-action` on `action-default`, `text-on-status-<name>` on `status-<name>`.
-Repo-only tokens (not in Figma yet): `--token-action-warning-hover`, `--token-switch-knob`.
 
 ---
 
