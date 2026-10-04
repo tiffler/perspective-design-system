@@ -33,18 +33,18 @@
 
 /* ── Standard ── */
 .chip--default.chip--solid {
-  background: var(--token-status-default);
+  background: var(--token-status-running);
   color: var(--token-text-on-solid);
 }
 .chip--default.chip--halftone {
-  background: var(--token-status-ht-default);
-  color: var(--token-status-default);
-  border-color: var(--token-status-default);
+  background: var(--token-status-ht-running);
+  color: var(--token-status-running);
+  border-color: var(--token-status-running);
 }
 .chip--default.chip--outline {
   background: transparent;
-  color: var(--token-status-default);
-  border-color: var(--token-status-default);
+  color: var(--token-status-running);
+  border-color: var(--token-status-running);
 }
 
 /* ── Error ── */
