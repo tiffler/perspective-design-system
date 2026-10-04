@@ -27,7 +27,7 @@ type Story = StoryObj<typeof meta>;
 
 /** Idle state, ready for interaction. */
 export const Default: Story = {
-  args: { variant: 'default', label: 'Label', placeholder: 'Select an option' },
+  args: { variant: 'default', label: 'Label', helperText: 'Help text goes here', placeholder: 'Select an option' },
 };
 
 /** Active state when the dropdown is open or focused. */

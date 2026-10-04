@@ -10,6 +10,8 @@ export interface InputProps {
   value?: string;
   /** Placeholder text */
   placeholder?: string;
+  /** Helper text shown below the input */
+  helperText?: string;
   /** Render as a textarea */
   multiline?: boolean;
   /** Number of rows for textarea */
@@ -23,6 +25,7 @@ export const Input = ({
   label = 'Label',
   value,
   placeholder = 'Input',
+  helperText,
   multiline = false,
   rows = 4,
   onChange,
@@ -52,6 +55,12 @@ export const Input = ({
         ? <textarea {...sharedProps} rows={rows} />
         : <input {...sharedProps} />
       }
+      {helperText && (
+        <div className="input-field__helper">
+          <span className="input-field__helper-icon" aria-hidden="true">info</span>
+          <span>{helperText}</span>
+        </div>
+      )}
     </div>
   );
 };

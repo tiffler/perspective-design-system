@@ -29,6 +29,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     variant: 'default',
+    helperText: 'Help text goes here',
     label: 'Label',
     placeholder: 'Input',
   },
