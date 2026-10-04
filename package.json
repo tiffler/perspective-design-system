@@ -1,5 +1,5 @@
 {
-  "name": "perspective",
+  "name": "perspective-design-system",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -47,5 +47,6 @@
     "typescript-eslint": "^8.56.1",
     "vite": "^8.0.0",
     "vitest": "^4.1.0"
-  }
+  },
+  "packageManager": "pnpm@11.11.0"
 }
