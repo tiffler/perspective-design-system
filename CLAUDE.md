@@ -36,68 +36,17 @@ export const Default: Story = {};
 ---
 
 ## Design Tokens
-Defined in `src/styles/component-tokens.css`. Always use these — never hardcode hex values.
+Three layers, one direction: `primitives.css` -> `component-tokens.css` -> components.
+- `src/styles/primitives.css`: raw values (`--primitive-*`). The only place hex values live.
+- `src/styles/component-tokens.css`: `--token-*` names that components use. Values are `var(--primitive-*)` references. Dark mode lives here under `:root[data-mode="dark"]`.
+- Components: use `--token-*` only. Never hardcode hex values and never reference `--primitive-*` directly.
 
-### Text
-| Token | Value |
-|---|---|
-| `--token-text-default` | #050505 |
-| `--token-text-subtle` | #5c5c64 |
-| `--token-text-muted` | #83838b |
-| `--token-text-on-solid` | #f5f5f5 |
-| `--token-text-danger` | #ae0000 |
-| `--token-text-urgent` | #814a00 |
-| `--token-text-always-white` | #ffffff |
-| `--token-text-always-black` | #000000 |
+To see a token's current value, read `component-tokens.css`. Themes are in `src/styles/themes/`; see `THEMING.md`.
 
-### Surface
-| Token | Value |
-|---|---|
-| `--token-surface-page` | #ffffff |
-| `--token-surface-section-subtle` | #f5f5f5 |
-
-### Action
-| Token | Value |
-|---|---|
-| `--token-action-default` | #9751c2 (purple) |
-| `--token-action-subtle` | #f6e9fd |
-| `--token-action-disabled` | #e9e9ea |
-| `--token-action-text-disabled` | #83838b |
-| `--token-action-danger` | #ae0000 |
-| `--token-action-warning` | #f79000 |
-| `--token-action-warning-dark` | #f8a42d (hover) |
-
-### Status
-| Token | Value |
-|---|---|
-| `--token-status-default` | #7e3fa5 |
-| `--token-status-danger` | #ae0000 |
-| `--token-status-running` | #215aef |
-| `--token-status-info-dark` | #53525a |
-| `--token-status-success` | #008109 |
-| `--token-status-urgent` | #f79000 |
-| `--token-status-ht-default` | #f6e9fd |
-| `--token-status-ht-danger` | #fce9e9 |
-| `--token-status-ht-running` | #e0eaff |
-| `--token-status-ht-info` | #fafafa |
-| `--token-status-ht-success` | #ecffee |
-| `--token-status-ht-urgent` | #fef2e0 |
-
-### Font
-| Token | Value |
-|---|---|
-| `--token-font-default` | Inter, sans-serif |
-| `--token-font-icon` | Material Symbols Rounded |
-
-### Component
-| Token | Value |
-|---|---|
-| `--token-button-height` | 40px |
-| `--token-button-radius` | 4px |
-| `--token-button-text-size` | 14px |
-| `--token-input-radius` | 8px |
-| `--token-input-border` | #bababe |
-| `--token-chip-radius` | 4px |
+Token names are the Figma variable names with `/` -> `-`: `--token-surface-page-default`, `--token-status-multi-tone-danger`, `--token-input-stroke-focus`.
+Groups: `--token-text-*`, `--token-surface-*`, `--token-action-*`, `--token-status-*` (and `status-multi-tone-*` tints), `--token-stroke-color-*`, `--token-space-*`, `--token-radius-*`, `--token-font-*`, plus per-component tokens (`--token-button-*`, `--token-input-*`, `--token-chip-*`, `--token-card-*`).
+Pairing: text on a fill uses its partner: `text-on-action` on `action-default`, `text-on-status-<name>` on `status-<name>`.
+Repo-only tokens (not in Figma yet): `--token-action-warning-hover`, `--token-switch-knob`.
 
 ---
 

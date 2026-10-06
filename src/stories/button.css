@@ -2,10 +2,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--token-button-gap);
+  gap: var(--token-button-content-gap);
   height: var(--token-button-height);
-  padding: var(--token-button-padding-v) var(--token-button-padding-h);
-  border-radius: var(--token-button-radius);
+  padding: var(--token-button-padding-vertical) var(--token-button-padding-horizontal);
+  border-radius: var(--token-control-radius);
   border: 1px solid transparent;
   font-family: var(--token-font-default);
   font-size: var(--token-button-text-size);
@@ -26,35 +26,35 @@
 /* ── Standard / Solid ── */
 .btn--solid.btn--default.btn--default        { background: var(--token-action-default); color: var(--token-button-solid-text); }
 .btn--solid.btn--default.btn--default:not(:disabled):hover  { background: var(--token-status-default); }
-.btn--solid.btn--default.btn--disabled       { background: var(--token-action-disabled); color: var(--token-action-text-disabled); }
+.btn--solid.btn--default.btn--disabled       { background: var(--token-action-disabled); color: var(--token-text-disabled); }
 .btn--solid.btn--default.btn--loading        { background: var(--token-action-disabled); color: var(--token-text-default); }
 
 /* ── Standard / Outline ── */
 .btn--outline.btn--default.btn--default       { background: transparent; border-color: var(--token-button-outline-text); color: var(--token-button-outline-text); }
 .btn--outline.btn--default.btn--default:not(:disabled):hover { background: var(--token-action-subtle); }
-.btn--outline.btn--default.btn--disabled      { background: transparent; border-color: var(--token-action-disabled); color: var(--token-action-text-disabled); }
+.btn--outline.btn--default.btn--disabled      { background: transparent; border-color: var(--token-action-disabled); color: var(--token-text-disabled); }
 .btn--outline.btn--default.btn--loading       { background: transparent; border-color: var(--token-action-disabled); color: var(--token-text-default); }
 
 /* ── Standard / Ghost ── */
 .btn--ghost.btn--default.btn--default        { background: transparent; color: var(--token-button-outline-text); }
 .btn--ghost.btn--default.btn--default:not(:disabled):hover  { background: var(--token-action-subtle); }
-.btn--ghost.btn--default.btn--disabled       { color: var(--token-action-text-disabled); }
+.btn--ghost.btn--default.btn--disabled       { color: var(--token-text-disabled); }
 .btn--ghost.btn--default.btn--loading        { color: var(--token-text-default); }
 
 /* ── Destructive / Solid ── */
-.btn--solid.btn--destructive.btn--default       { background: var(--token-action-danger); color: var(--token-text-always-white); }
+.btn--solid.btn--destructive.btn--default       { background: var(--token-action-danger); color: var(--token-text-on-status-danger); }
 .btn--solid.btn--destructive.btn--default:not(:disabled):hover { background: var(--token-status-danger); }
 
 /* ── Destructive / Outline ── */
 .btn--outline.btn--destructive.btn--default       { background: transparent; border-color: var(--token-action-danger); color: var(--token-text-danger); }
-.btn--outline.btn--destructive.btn--default:not(:disabled):hover { background: var(--token-status-ht-danger); }
+.btn--outline.btn--destructive.btn--default:not(:disabled):hover { background: var(--token-status-multi-tone-danger); }
 
 /* ── Warning / Solid ── */
-.btn--solid.btn--warning.btn--default       { background: var(--token-action-warning); color: var(--token-text-always-black); }
-.btn--solid.btn--warning.btn--default:not(:disabled):hover { background: var(--token-action-warning-dark); }
+.btn--solid.btn--warning.btn--default       { background: var(--token-action-warning); color: var(--token-text-on-status-urgent); }
+.btn--solid.btn--warning.btn--default:not(:disabled):hover { background: var(--token-action-warning-hover); }
 
 /* ── Warning / Outline ── */
 .btn--outline.btn--warning.btn--default       { background: transparent; border-color: var(--token-action-warning); color: var(--token-text-urgent); }
-.btn--outline.btn--warning.btn--default:not(:disabled):hover { background: var(--token-status-ht-urgent); }
+.btn--outline.btn--warning.btn--default:not(:disabled):hover { background: var(--token-status-multi-tone-urgent); }
 
 .btn:disabled { cursor: not-allowed; }

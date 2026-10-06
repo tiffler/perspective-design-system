@@ -18,7 +18,7 @@ const FormPage = () => {
       fontFamily: 'var(--token-font-default)',
     }}>
       <div style={{
-        background: 'var(--token-surface-page)',
+        background: 'var(--token-surface-page-default)',
         borderRadius: '12px',
         padding: '40px',
         width: '100%',
@@ -28,7 +28,7 @@ const FormPage = () => {
         <h2 style={{ margin: '0 0 8px', fontSize: '24px', fontWeight: 600, color: 'var(--token-text-default)' }}>
           Get in touch
         </h2>
-        <p style={{ margin: '0 0 32px', fontSize: '14px', color: 'var(--token-text-muted)' }}>
+        <p style={{ margin: '0 0 32px', fontSize: '14px', color: 'var(--token-text-subtle)' }}>
           Fill out the form below and we'll get back to you shortly.
         </p>
 

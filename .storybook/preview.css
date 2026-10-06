@@ -4,60 +4,9 @@ body {
   margin: 0;
   font-family: var(--token-font-default);
   color: var(--token-text-default);
-  background: var(--token-surface-page);
+  background: var(--token-surface-page-default);
 }
 
-html[data-theme="dark"] {
+html[data-mode="dark"] {
   color-scheme: dark;
-  background: #19181a;
-
-  /* Text */
-  --token-text-default:      #f5f5f5;
-  --token-text-subtle:       #9a9aa0;
-  --token-text-muted:        #64646b;
-  --token-text-danger:       #e44d4d;
-  --token-text-urgent:       #f8a42d;
-
-  /* Surface */
-  --token-surface-page:           #19181a;
-  --token-surface-section-subtle: #232225;
-
-  /* Action */
-  --token-action-default:       #cc7cfc;
-  --token-action-subtle:        #38154d;
-  --token-action-disabled:      #37353a;
-  --token-action-text-disabled: #64646b;
-  --token-action-danger:        #e44d4d;
-  --token-action-warning:       #f8a42d;
-  --token-action-warning-dark:  #fab75a;
-
-  /* Status */
-  --token-status-default:   #b166df;
-  --token-status-danger:    #e44d4d;
-  --token-status-running:   #4d7bf2;
-  --token-status-info-dark: #9a9aa0;
-  --token-status-success:   #00d410;
-  --token-status-urgent:    #f8a42d;
-
-  /* Status half-tones */
-  --token-status-ht-default: #38154d;
-  --token-status-ht-danger:  #320101;
-  --token-status-ht-running: #0a1b48;
-  --token-status-ht-info:    #2d2b2f;
-  --token-status-ht-success: #004001;
-  --token-status-ht-urgent:  #5d3500;
-
-  /* Button */
-  --token-button-solid-text:   #050505;
-  --token-button-outline-text: #cc7cfc;
-
-  /* Input */
-  --token-input-fill:          #2d2b2f;
-  --token-input-border:        #4a494f;
-  --token-input-border-focus:  #9a9aa0;
-  --token-input-fill-error:    #320101;
-  --token-input-fill-disabled: #37353a;
-
-  /* Controls */
-  --token-switch-knob: #f5f5f5;
 }

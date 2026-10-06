@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 4px;
   height: 24px;
-  padding: 0 var(--token-chip-padding-h);
+  padding: 0 var(--token-chip-padding-horizontal);
   border-radius: var(--token-chip-radius);
   border: 1px solid transparent;
   box-sizing: border-box;
@@ -34,26 +34,26 @@
 /* ── Standard ── */
 .chip--default.chip--solid {
   background: var(--token-status-default);
-  color: var(--token-text-on-solid);
+  color: var(--token-text-on-status-default);
 }
 .chip--default.chip--halftone {
-  background: var(--token-status-ht-default);
-  color: var(--token-status-default);
-  border-color: var(--token-status-default);
+  background: var(--token-status-multi-tone-default);
+  color: var(--token-action-default);
+  border-color: var(--token-action-default);
 }
 .chip--default.chip--outline {
   background: transparent;
-  color: var(--token-status-default);
-  border-color: var(--token-status-default);
+  color: var(--token-action-default);
+  border-color: var(--token-action-default);
 }
 
 /* ── Error ── */
 .chip--error.chip--solid {
   background: var(--token-status-danger);
-  color: var(--token-text-on-solid);
+  color: var(--token-text-on-status-danger);
 }
 .chip--error.chip--halftone {
-  background: var(--token-status-ht-danger);
+  background: var(--token-status-multi-tone-danger);
   color: var(--token-text-danger);
   border-color: var(--token-status-danger);
 }
@@ -65,59 +65,59 @@
 
 /* ── Running ── */
 .chip--running.chip--solid {
-  background: var(--token-status-running);
-  color: var(--token-text-on-solid);
+  background: var(--token-status-active);
+  color: var(--token-text-on-status-active);
 }
 .chip--running.chip--halftone {
-  background: var(--token-status-ht-running);
-  color: var(--token-status-running);
-  border-color: var(--token-status-running);
+  background: var(--token-status-multi-tone-active);
+  color: var(--token-text-active);
+  border-color: var(--token-text-active);
 }
 .chip--running.chip--outline {
   background: transparent;
-  color: var(--token-status-running);
-  border-color: var(--token-status-running);
+  color: var(--token-text-active);
+  border-color: var(--token-text-active);
 }
 
 /* ── Informational ── */
 .chip--info.chip--solid {
-  background: var(--token-status-info-dark);
-  color: var(--token-text-on-solid);
+  background: var(--token-status-info);
+  color: var(--token-text-on-status-info);
 }
 .chip--info.chip--halftone {
-  background: var(--token-status-ht-info);
+  background: var(--token-status-multi-tone-info);
   color: var(--token-text-subtle);
-  border-color: var(--token-status-info-dark);
+  border-color: var(--token-status-info);
 }
 .chip--info.chip--outline {
   background: transparent;
   color: var(--token-text-subtle);
-  border-color: var(--token-status-info-dark);
+  border-color: var(--token-status-info);
 }
 
 /* ── Success ── */
 .chip--success.chip--solid {
   background: var(--token-status-success);
-  color: var(--token-text-on-solid);
+  color: var(--token-text-on-status-success);
 }
 .chip--success.chip--halftone {
-  background: var(--token-status-ht-success);
-  color: var(--token-status-success);
-  border-color: var(--token-status-success);
+  background: var(--token-status-multi-tone-success);
+  color: var(--token-text-success);
+  border-color: var(--token-text-success);
 }
 .chip--success.chip--outline {
   background: transparent;
-  color: var(--token-status-success);
-  border-color: var(--token-status-success);
+  color: var(--token-text-success);
+  border-color: var(--token-text-success);
 }
 
 /* ── Urgent ── */
 .chip--urgent.chip--solid {
   background: var(--token-status-urgent);
-  color: var(--token-text-default);
+  color: var(--token-text-on-status-urgent);
 }
 .chip--urgent.chip--halftone {
-  background: var(--token-status-ht-urgent);
+  background: var(--token-status-multi-tone-urgent);
   color: var(--token-text-urgent);
   border-color: var(--token-status-urgent);
 }

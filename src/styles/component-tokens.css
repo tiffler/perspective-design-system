@@ -1,139 +1,210 @@
 /* ============================================================
-   Valid CSS custom property aliases for Perspective tokens.
-   The source tokens use slash-separated names (e.g. --text/default)
-   which are not valid CSS identifiers. These hyphenated aliases
-   map to the same values and are safe to use in component CSS.
+   Perspective — TOKENS (layer 2 of 3)
+
+   Generated from the Figma variables (nordHMziieQgLbg3UKUudF).
+   Token name = "--token-" + the Figma variable name with "/" -> "-".
+     surface/page/default -> --token-surface-page-default
+
+   Every value references a primitive (primitives.css) or another
+   token, so editing primitives re-themes all of it. Components read
+   --token-* names only.
+
+   Two independent switches on <html>:
+     data-theme="<name>"  brand theme (primitive overrides, see themes/)
+     data-mode="dark"     dark mode (light is the default)
+
+   The dark block lists only the values that differ from light.
+
+   REPO-ONLY tokens (marked below) have no Figma variable yet. Add
+   them to Figma, then regenerate this file.
    ============================================================ */
 
-/* ── Light mode (default) ── */
 :root {
 
-  /* Font */
-  --token-font-default: Inter, sans-serif;
-  --token-font-icon:    'Material Symbols Rounded';
+  /* ===== color ===== */
+  --token-action-danger: var(--token-status-danger);
+  --token-action-default: var(--primitive-brand-600);
+  --token-action-disabled: var(--primitive-neutral-300);
+  --token-action-off: var(--primitive-neutral-600);
+  --token-action-prominent: color-mix(in srgb, var(--token-action-default) 80%, transparent);
+  --token-action-subtle: color-mix(in srgb, var(--token-action-default) 40%, transparent);
+  --token-action-warning: var(--token-status-urgent);
+  --token-elevation-sm: var(--primitive-shadow-light-sm);
+  --token-elevation-xs: var(--primitive-shadow-light-xs);
+  --token-status-active: var(--primitive-blue-500);
+  --token-status-danger: var(--primitive-red-600);
+  --token-status-default: var(--primitive-brand-600);
+  --token-status-info: var(--primitive-neutral-900);
+  --token-status-multi-tone-active: color-mix(in srgb, var(--primitive-blue-500) calc(var(--primitive-opacity-15) * 1%), transparent);
+  --token-status-multi-tone-danger: color-mix(in srgb, var(--token-status-danger) calc(var(--primitive-opacity-15) * 1%), transparent);
+  --token-status-multi-tone-default: color-mix(in srgb, var(--primitive-brand-600) calc(var(--primitive-opacity-15) * 1%), transparent);
+  --token-status-multi-tone-info: color-mix(in srgb, var(--primitive-neutral-500) calc(var(--primitive-opacity-50) * 1%), transparent);
+  --token-status-multi-tone-success: color-mix(in srgb, var(--primitive-green-500) calc(var(--primitive-opacity-15) * 1%), transparent);
+  --token-status-multi-tone-urgent: color-mix(in srgb, var(--primitive-orange-500) calc(var(--primitive-opacity-15) * 1%), transparent);
+  --token-status-success: var(--primitive-green-700);
+  --token-status-urgent: var(--primitive-orange-500);
+  --token-stroke-color-default: var(--primitive-neutral-800);
+  --token-stroke-color-focus: var(--token-action-default);
+  --token-stroke-color-prominent: var(--primitive-neutral-900);
+  --token-stroke-color-subtle: var(--primitive-neutral-300);
+  --token-surface-card-default: var(--primitive-neutral-100);
+  --token-surface-card-subtle: var(--primitive-neutral-200);
+  --token-surface-overlay-default: var(--primitive-neutral-200);
+  --token-surface-overlay-inverse: var(--primitive-neutral-1500);
+  --token-surface-overlay-subtle: var(--primitive-neutral-300);
+  --token-surface-page-default: var(--primitive-neutral-100);
+  --token-surface-page-inverse: var(--primitive-neutral-1600);
+  --token-surface-page-subtle: var(--primitive-neutral-200);
+  --token-surface-section-default: var(--primitive-neutral-300);
+  --token-surface-section-inverse: var(--primitive-neutral-1700);
+  --token-surface-section-subtle: var(--primitive-neutral-200);
+  --token-text-active: var(--token-status-active);
+  --token-text-danger: var(--token-status-danger);
+  --token-text-default: var(--primitive-neutral-1600);
+  --token-text-disabled: var(--primitive-neutral-700);
+  --token-text-on-action: var(--primitive-neutral-200);
+  --token-text-on-status-active: var(--primitive-neutral-200);
+  --token-text-on-status-danger: var(--primitive-neutral-200);
+  --token-text-on-status-default: var(--primitive-neutral-200);
+  --token-text-on-status-info: var(--primitive-neutral-200);
+  --token-text-on-status-success: var(--primitive-neutral-200);
+  --token-text-on-status-urgent: var(--primitive-neutral-1600);
+  --token-text-subtle: var(--primitive-neutral-900);
+  --token-text-success: var(--token-status-success);
+  --token-text-urgent: var(--primitive-orange-800);
 
-  /* Text */
-  --token-text-default:      #050505;
-  --token-text-subtle:       #5c5c64;
-  --token-text-muted:        #83838b;
-  --token-text-on-solid:     #f5f5f5;
-  --token-text-always-white: #ffffff;
-  --token-text-always-black: #000000;
-  --token-text-danger:       #ae0000;
-  --token-text-urgent:       #814a00;
+  /* ===== components ===== */
+  --token-button-content-gap: var(--primitive-space-300);
+  --token-button-ghost-hover: var(--token-action-subtle);
+  --token-button-ghost-text: var(--token-action-default);
+  --token-button-height: var(--token-control-height);
+  --token-button-icon-size: var(--token-icon-size-s);
+  --token-button-outline-hover: var(--token-action-subtle);
+  --token-button-outline-stroke: var(--token-action-default);
+  --token-button-outline-text: var(--token-action-default);
+  --token-button-padding-horizontal: var(--primitive-space-400);
+  --token-button-padding-vertical: var(--primitive-space-300);
+  --token-button-solid-fill: var(--token-action-default);
+  --token-button-solid-hover: var(--token-action-prominent);
+  --token-button-solid-text: var(--token-text-on-action);
+  --token-button-text-size: var(--token-font-size-label);
+  --token-card-gap: var(--primitive-space-400);
+  --token-card-radius: var(--token-radius-md);
+  --token-card-stroke-default: var(--token-stroke-color-subtle);
+  --token-chip-font-size-sm: var(--token-font-size-caption);
+  --token-chip-font-size-xs: var(--primitive-font-size-100);
+  --token-chip-multi-tone-gap: var(--primitive-space-200);
+  --token-chip-multi-tone-padding: var(--primitive-space-300);
+  --token-chip-padding-horizontal: var(--primitive-space-300);
+  --token-chip-radius: var(--token-radius-xs);
+  --token-icon-checkbox-indeterminate: "indeterminate_check_box";
+  --token-icon-checkbox-selected: "check_box";
+  --token-icon-checkbox-unselected: "check_box_outline_blank";
+  --token-icon-radio-selected: "radio_button_checked";
+  --token-icon-radio-unselected: "radio_button_unchecked";
+  --token-icon-size-l: var(--primitive-size-1000);
+  --token-icon-size-m: var(--primitive-size-900);
+  --token-icon-size-s: var(--primitive-size-700);
+  --token-icon-size-xl: var(--primitive-size-1100);
+  --token-icon-size-xs: var(--primitive-size-500);
+  --token-input-fill: var(--token-surface-card-default);
+  --token-input-fill-disabled: var(--token-action-disabled);
+  --token-input-fill-error: var(--token-status-multi-tone-danger);
+  --token-input-height: var(--token-control-height);
+  --token-input-padding-md: var(--primitive-space-400);
+  --token-input-padding-sm: var(--primitive-space-300);
+  --token-input-stroke: var(--token-stroke-color-default);
+  --token-input-stroke-focus: var(--token-stroke-color-focus);
+  --token-input-text-default: var(--token-text-default);
+  --token-input-text-label: var(--token-text-subtle);
+  --token-input-text-placeholder: var(--token-text-subtle);
+  --token-switch-off: var(--token-action-off);
+  --token-textarea-radius: var(--token-radius-md);
 
-  /* Surface */
-  --token-surface-page:           #ffffff;
-  --token-surface-section-subtle: #f5f5f5;
+  /* ===== layout ===== */
+  --token-control-height: var(--primitive-size-1100);
+  --token-control-radius: var(--primitive-radius-1000);
+  --token-radius-lg: var(--primitive-radius-400);
+  --token-radius-md: var(--primitive-radius-300);
+  --token-radius-sm: var(--primitive-radius-200);
+  --token-radius-xs: var(--primitive-radius-100);
+  --token-space-lg: var(--primitive-space-600);
+  --token-space-md: var(--primitive-space-500);
+  --token-space-sm: var(--primitive-space-400);
+  --token-space-xl: var(--primitive-space-700);
+  --token-space-xs: var(--primitive-space-300);
+  --token-space-xxl: var(--primitive-space-800);
+  --token-space-xxs: var(--primitive-space-200);
+  --token-stroke-weight-default: var(--primitive-size-100);
 
-  /* Action */
-  --token-action-default:       #9751c2;
-  --token-action-subtle:        #f6e9fd;
-  --token-action-disabled:      #e9e9ea;
-  --token-action-text-disabled: #83838b;
-  --token-action-danger:        #ae0000;
-  --token-action-warning:       #f79000;
-  --token-action-warning-dark:  #f8a42d;
+  /* ===== typography ===== */
+  --token-font-size-body: var(--primitive-font-size-400);
+  --token-font-size-caption: var(--primitive-font-size-200);
+  --token-font-size-h1: var(--primitive-size-1100);
+  --token-font-size-h2: var(--primitive-size-1000);
+  --token-font-size-label: var(--primitive-font-size-300);
+  --token-font-default: var(--primitive-font-default);
+  --token-font-icon: var(--primitive-font-icon);
+  --token-font-icon-brand: var(--primitive-font-icon-brand);
+  --token-font-variable-axes: 'FILL' 1;
 
-  /* Status */
-  --token-status-default:   #7e3fa5;
-  --token-status-danger:    #ae0000;
-  --token-status-running:   #215aef;
-  --token-status-info-dark: #53525a;
-  --token-status-success:   #008109;
-  --token-status-urgent:    #f79000;
-
-  /* Status half-tones */
-  --token-status-ht-default: #f6e9fd;
-  --token-status-ht-danger:  #fce9e9;
-  --token-status-ht-running: #e0eaff;
-  --token-status-ht-info:    #fafafa;
-  --token-status-ht-success: #ecffee;
-  --token-status-ht-urgent:  #fef2e0;
-
-  /* Button */
-  --token-button-height:       40px;
-  --token-button-padding-h:    16px;
-  --token-button-padding-v:    8px;
-  --token-button-gap:          8px;
-  --token-button-radius:       4px;
-  --token-button-text-size:    14px;
-  --token-button-solid-text:   #f5f5f5;
-  --token-button-outline-text: #9751c2;
-
-  /* Chip */
-  --token-chip-padding-h: 8px;
-  --token-chip-radius:    4px;
-
-  /* Input */
-  --token-input-padding:       16px;
-  --token-input-radius:        8px;
-  --token-input-fill:          #ffffff;
-  --token-input-border:        #bababe;
-  --token-input-border-focus:  #74747c;
-  --token-input-fill-error:    #fce9e9;
-  --token-input-fill-disabled: #e9e9ea;
-
-  /* Card */
-  --token-card-gap:     16px;
-  --token-card-padding: 24px;
-  --token-card-radius:  16px;
-  --token-card-bg:      #ffffff;
-  --token-card-border:  #e9e9ea;
-  --token-card-shadow:  0 1px 4px 0 #3333331a;
-
-  /* Controls */
-  --token-switch-knob: #ffffff;
+  /* ===== repo-only (not in Figma yet) ===== */
+  --token-action-warning-hover: color-mix(in srgb, var(--token-action-warning) 85%, black);
+  --token-switch-knob: var(--primitive-neutral-100);
 
 }
 
-/* ── Dark mode values ── */
-:root[data-theme="dark"] {
-  --token-text-default:      #f5f5f5;
-  --token-text-subtle:       #9a9aa0;
-  --token-text-muted:        #64646b;
-  --token-text-danger:       #e44d4d;
-  --token-text-urgent:       #f8a42d;
+/* ── Dark mode: only the values that differ from light ── */
+:root[data-mode="dark"] {
+  color-scheme: dark;
 
-  --token-surface-page:           #19181a;
-  --token-surface-section-subtle: #232225;
+  --token-action-danger: var(--primitive-red-500);
+  --token-action-default: var(--primitive-brand-300);
+  --token-action-disabled: var(--primitive-neutral-1300);
+  --token-action-off: var(--primitive-neutral-900);
+  --token-action-prominent: var(--primitive-brand-200);
+  --token-action-subtle: var(--primitive-brand-800);
+  --token-action-warning: var(--primitive-orange-400);
+  --token-elevation-sm: var(--primitive-shadow-dark-sm);
+  --token-elevation-xs: var(--primitive-shadow-dark-xs);
+  --token-status-active: var(--primitive-blue-600);
+  --token-status-danger: var(--primitive-red-700);
+  --token-status-default: var(--primitive-brand-300);
+  --token-status-multi-tone-active: var(--primitive-blue-900);
+  --token-status-multi-tone-danger: var(--primitive-red-900);
+  --token-status-multi-tone-default: var(--primitive-brand-900);
+  --token-status-multi-tone-info: var(--primitive-neutral-1200);
+  --token-status-multi-tone-success: var(--primitive-green-900);
+  --token-status-multi-tone-urgent: var(--primitive-orange-900);
+  --token-status-success: var(--primitive-green-800);
+  --token-stroke-color-default: var(--primitive-neutral-900);
+  --token-stroke-color-focus: var(--primitive-neutral-400);
+  --token-stroke-color-prominent: var(--primitive-neutral-800);
+  --token-stroke-color-subtle: var(--primitive-neutral-1100);
+  --token-surface-card-default: var(--primitive-neutral-1300);
+  --token-surface-card-subtle: var(--primitive-neutral-1400);
+  --token-surface-overlay-default: var(--primitive-neutral-1600);
+  --token-surface-overlay-inverse: var(--primitive-neutral-200);
+  --token-surface-overlay-subtle: var(--primitive-neutral-1600);
+  --token-surface-page-default: var(--primitive-neutral-1600);
+  --token-surface-page-inverse: var(--primitive-neutral-200);
+  --token-surface-page-subtle: var(--primitive-neutral-1500);
+  --token-surface-section-default: var(--primitive-neutral-1300);
+  --token-surface-section-inverse: var(--primitive-neutral-200);
+  --token-surface-section-subtle: var(--primitive-neutral-1300);
+  --token-text-active: var(--primitive-blue-300);
+  --token-text-danger: var(--primitive-red-200);
+  --token-text-default: var(--primitive-neutral-200);
+  --token-text-on-action: var(--primitive-neutral-1600);
+  --token-text-on-status-active: var(--primitive-neutral-100);
+  --token-text-on-status-danger: var(--primitive-neutral-100);
+  --token-text-on-status-default: var(--primitive-neutral-1600);
+  --token-text-on-status-info: var(--primitive-neutral-100);
+  --token-text-on-status-success: var(--primitive-neutral-100);
+  --token-text-subtle: var(--primitive-neutral-600);
+  --token-text-success: var(--primitive-green-500);
+  --token-text-urgent: var(--primitive-orange-400);
 
-  --token-action-default:       #cc7cfc;
-  --token-action-subtle:        #38154d;
-  --token-action-disabled:      #37353a;
-  --token-action-text-disabled: #64646b;
-  --token-action-danger:        #e44d4d;
-  --token-action-warning:       #f8a42d;
-  --token-action-warning-dark:  #fab75a;
-
-  --token-status-default:   #b166df;
-  --token-status-danger:    #e44d4d;
-  --token-status-running:   #4d7bf2;
-  --token-status-info-dark: #9a9aa0;
-  --token-status-success:   #00d410;
-  --token-status-urgent:    #f8a42d;
-
-  --token-status-ht-default: #38154d;
-  --token-status-ht-danger:  #320101;
-  --token-status-ht-running: #0a1b48;
-  --token-status-ht-info:    #2d2b2f;
-  --token-status-ht-success: #004001;
-  --token-status-ht-urgent:  #5d3500;
-
-  --token-button-solid-text:   #050505;
-  --token-button-outline-text: #cc7cfc;
-
-  --token-input-fill:          #2d2b2f;
-  --token-input-border:        #4a494f;
-  --token-input-border-focus:  #9a9aa0;
-  --token-input-fill-error:    #320101;
-  --token-input-fill-disabled: #37353a;
-
-  --token-switch-knob: #f5f5f5;
-
-  /* Card */
-  --token-card-bg:     #232225;
-  --token-card-border: #37353a;
-  --token-card-shadow: 0 1px 4px 0 #0000001a;
+  /* repo-only */
+  --token-switch-knob: var(--primitive-neutral-200);
 }
-
