@@ -39,7 +39,7 @@ export const Default: Story = {};
 Three layers, one direction: `primitives.css` -> `component-tokens.css` -> components.
 - `src/styles/primitives.css`: raw values (`--primitive-*`). The only place hex values live.
 - `src/styles/component-tokens.css`: `--token-*` names that components use. Values are `var(--primitive-*)` references. Dark mode lives here under `:root[data-mode="dark"]`.
-- Components: use `--token-*` only. Never hardcode hex values and never reference `--primitive-*` directly.
+- Components: use `--token-*` only. Never hardcode hex values and never reference `--primitive-*` directly. Enforced by `pnpm lint:css` (stylelint): no hex, named or `rgb()`-style colors and no `var(--primitive-*)` outside `src/styles/`. Covers `src/stories`, `.storybook` and `src/styles`; the Vite scaffold files `src/index.css` and `src/App.css` are not in scope.
 
 Token documentation lives in Storybook under `Tokens/` (one page per Figma collection). It is driven by `src/tokens/tokens.json`, an export of the Figma variables, so re-export it whenever variables change in Figma.
 

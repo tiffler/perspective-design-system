@@ -39,9 +39,9 @@
   vertical-align: top;
   margin-right: 10px;
   border-radius: 1em;
-  background: #e7fdd8;
+  background: var(--token-status-multi-tone-success);
   padding: 4px 12px;
-  color: #357a14;
+  color: var(--token-text-success);
   font-weight: 700;
   font-size: 11px;
   line-height: 12px;
@@ -64,5 +64,5 @@
 }
 
 .storybook-page .tip-wrapper svg path {
-  fill: #1ea7fd;
+  fill: var(--token-action-default);
 }

@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "pnpm lint:css && eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_d5c869fd0e923ae"
+    "chromatic": "npx chromatic --project-token=chpt_d5c869fd0e923ae",
+    "lint:css": "stylelint \"src/stories/**/*.css\" \".storybook/**/*.css\" \"src/styles/**/*.css\""
   },
   "dependencies": {
     "react": "^19.2.4",
@@ -42,6 +43,7 @@
     "playwright": "^1.58.2",
     "postcss": "^8.5.8",
     "storybook": "^10.3.3",
+    "stylelint": "^17.16.0",
     "tailwindcss": "^4.2.1",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.56.1",
