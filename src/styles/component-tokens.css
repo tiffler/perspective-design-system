@@ -169,7 +169,7 @@
   --token-elevation-sm: var(--primitive-shadow-dark-sm);
   --token-elevation-xs: var(--primitive-shadow-dark-xs);
   --token-status-active: var(--primitive-blue-600);
-  --token-status-danger: var(--primitive-red-700);
+  --token-status-danger: var(--primitive-red-500);
   --token-status-default: var(--primitive-brand-300);
   --token-status-multi-tone-active: var(--primitive-blue-900);
   --token-status-multi-tone-danger: var(--primitive-red-900);
