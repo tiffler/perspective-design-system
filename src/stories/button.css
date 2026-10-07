@@ -36,13 +36,13 @@
 .btn--outline.btn--default.btn--loading       { background: transparent; border-color: var(--token-action-disabled); color: var(--token-text-default); }
 
 /* ── Standard / Ghost ── */
-.btn--ghost.btn--default.btn--default        { background: transparent; color: var(--token-button-ghost-text); }
+.btn--ghost.btn--default.btn--default        { background: transparent; color: var(--token-button-outline-text); }
 .btn--ghost.btn--default.btn--default:not(:disabled):hover  { background: var(--token-button-ghost-hover); }
 .btn--ghost.btn--default.btn--disabled       { color: var(--token-text-disabled); }
 .btn--ghost.btn--default.btn--loading        { color: var(--token-text-default); }
 
 /* ── Destructive / Solid ── */
-.btn--solid.btn--destructive.btn--default       { background: var(--token-action-danger); color: var(--token-text-on-status-danger); }
+.btn--solid.btn--destructive.btn--default       { background: var(--token-action-danger); color: var(--token-button-solid-text); }
 .btn--solid.btn--destructive.btn--default:not(:disabled):hover { background: var(--token-status-danger); }
 
 /* ── Destructive / Outline ── */

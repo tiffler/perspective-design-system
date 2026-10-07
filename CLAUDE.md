@@ -43,7 +43,7 @@ Three layers, one direction: `primitives.css` -> `component-tokens.css` -> compo
 
 To see a token's current value, read `component-tokens.css`. Themes are in `src/styles/themes/`; see `THEMING.md`.
 
-Token names are the Figma variable names with `/` -> `-`: `--token-surface-page-default`, `--token-status-multi-tone-danger`, `--token-input-stroke-focus`.
+Token names are the Figma variable names with `/` -> `-` (`--token-status-multi-tone-danger`, `--token-input-stroke-focus`). Exception: the surface tokens keep a `-default` suffix in code. Figma names them `surface/page`, `surface/card`, `surface/section`, `surface/overlay` (and `-subtle`, `-inverse`), while the code names stay `--token-surface-page-default` and so on. The code syntax set on each Figma variable is the source of truth.
 Groups: `--token-text-*`, `--token-surface-*`, `--token-action-*`, `--token-status-*` (and `status-multi-tone-*` tints), `--token-stroke-color-*`, `--token-space-*`, `--token-radius-*`, `--token-font-*`, plus per-component tokens (`--token-button-*`, `--token-input-*`, `--token-chip-*`, `--token-card-*`).
 Pairing: text on a fill uses its partner: `text-on-action` on `action-default`, `text-on-status-<name>` on `status-<name>`.
 

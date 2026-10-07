@@ -98,7 +98,7 @@
   --token-chip-multi-tone-gap: var(--primitive-space-200);
   --token-chip-multi-tone-padding: var(--primitive-space-300);
   --token-chip-padding-horizontal: var(--primitive-space-300);
-  --token-chip-radius: var(--token-radius-xs);
+  --token-chip-radius: var(--token-control-radius);
   --token-icon-checkbox-indeterminate: "indeterminate_check_box";
   --token-icon-checkbox-selected: "check_box";
   --token-icon-checkbox-unselected: "check_box_outline_blank";

@@ -38,13 +38,13 @@
 }
 .chip--default.chip--halftone {
   background: var(--token-status-multi-tone-default);
-  color: var(--token-action-default);
-  border-color: var(--token-action-default);
+  color: var(--token-status-default);
+  border-color: var(--token-status-default);
 }
 .chip--default.chip--outline {
   background: transparent;
-  color: var(--token-action-default);
-  border-color: var(--token-action-default);
+  color: var(--token-status-default);
+  border-color: var(--token-status-default);
 }
 
 /* ── Error ── */
