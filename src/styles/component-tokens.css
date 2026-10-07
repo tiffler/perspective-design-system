@@ -71,19 +71,20 @@
   --token-text-on-status-info: var(--primitive-neutral-200);
   --token-text-on-status-success: var(--primitive-neutral-200);
   --token-text-on-status-urgent: var(--primitive-neutral-1600);
+  --token-text-action: var(--primitive-brand-600);
   --token-text-subtle: var(--primitive-neutral-900);
-  --token-text-success: var(--token-status-success);
+  --token-text-success: var(--primitive-green-800);
   --token-text-urgent: var(--primitive-orange-800);
 
   /* ===== components ===== */
   --token-button-content-gap: var(--primitive-space-300);
   --token-button-ghost-hover: var(--token-action-subtle);
-  --token-button-ghost-text: var(--token-action-default);
+  --token-button-ghost-text: var(--token-text-action);
   --token-button-height: var(--token-control-height);
   --token-button-icon-size: var(--token-icon-size-s);
   --token-button-outline-hover: var(--token-action-subtle);
   --token-button-outline-stroke: var(--token-action-default);
-  --token-button-outline-text: var(--token-action-default);
+  --token-button-outline-text: var(--token-text-action);
   --token-button-padding-horizontal: var(--primitive-space-400);
   --token-button-padding-vertical: var(--primitive-space-300);
   --token-button-solid-fill: var(--token-action-default);
@@ -194,7 +195,7 @@
   --token-surface-section-inverse: var(--primitive-neutral-200);
   --token-surface-section-subtle: var(--primitive-neutral-1300);
   --token-text-active: var(--primitive-blue-300);
-  --token-text-danger: var(--primitive-red-200);
+  --token-text-danger: var(--primitive-red-100);
   --token-text-default: var(--primitive-neutral-200);
   --token-text-on-action: var(--primitive-neutral-1600);
   --token-text-on-status-active: var(--primitive-neutral-100);
@@ -202,6 +203,7 @@
   --token-text-on-status-default: var(--primitive-neutral-1600);
   --token-text-on-status-info: var(--primitive-neutral-100);
   --token-text-on-status-success: var(--primitive-neutral-100);
+  --token-text-action: var(--primitive-brand-200);
   --token-text-subtle: var(--primitive-neutral-600);
   --token-text-success: var(--primitive-green-500);
   --token-text-urgent: var(--primitive-orange-400);
