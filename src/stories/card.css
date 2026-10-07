@@ -6,6 +6,6 @@
   border-radius: var(--token-card-radius);
   background: var(--token-surface-card-default);
   border: 1px solid var(--token-card-stroke-default);
-  box-shadow: 0 1px 4px 0 var(--token-elevation-xs);
+  box-shadow: 0 4px 8px 0 var(--token-elevation-sm);
   box-sizing: border-box;
 }

@@ -39,14 +39,15 @@ export const Default: Story = {};
 Three layers, one direction: `primitives.css` -> `component-tokens.css` -> components.
 - `src/styles/primitives.css`: raw values (`--primitive-*`). The only place hex values live.
 - `src/styles/component-tokens.css`: `--token-*` names that components use. Values are `var(--primitive-*)` references. Dark mode lives here under `:root[data-mode="dark"]`.
-- Components: use `--token-*` only. Never hardcode hex values and never reference `--primitive-*` directly.
+- Components: use `--token-*` only. Never hardcode hex values and never reference `--primitive-*` directly. Enforced by `pnpm lint:css` (stylelint): no hex, named or `rgb()`-style colors and no `var(--primitive-*)` outside `src/styles/`. Covers `src/stories`, `.storybook` and `src/styles`; the Vite scaffold files `src/index.css` and `src/App.css` are not in scope.
+
+Token documentation lives in Storybook under `Tokens/` (one page per Figma collection). It is driven by `src/tokens/tokens.json`, an export of the Figma variables, so re-export it whenever variables change in Figma.
 
 To see a token's current value, read `component-tokens.css`. Themes are in `src/styles/themes/`; see `THEMING.md`.
 
-Token names are the Figma variable names with `/` -> `-`: `--token-surface-page-default`, `--token-status-multi-tone-danger`, `--token-input-stroke-focus`.
+Token names are the Figma variable names with `/` -> `-` (`--token-status-multi-tone-danger`, `--token-input-stroke-focus`). Exception: the surface tokens keep a `-default` suffix in code. Figma names them `surface/page`, `surface/card`, `surface/section`, `surface/overlay` (and `-subtle`, `-inverse`), while the code names stay `--token-surface-page-default` and so on. The code syntax set on each Figma variable is the source of truth.
 Groups: `--token-text-*`, `--token-surface-*`, `--token-action-*`, `--token-status-*` (and `status-multi-tone-*` tints), `--token-stroke-color-*`, `--token-space-*`, `--token-radius-*`, `--token-font-*`, plus per-component tokens (`--token-button-*`, `--token-input-*`, `--token-chip-*`, `--token-card-*`).
 Pairing: text on a fill uses its partner: `text-on-action` on `action-default`, `text-on-status-<name>` on `status-<name>`.
-Repo-only tokens (not in Figma yet): `--token-action-warning-hover`, `--token-switch-knob`.
 
 ---
 

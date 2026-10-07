@@ -18,26 +18,26 @@
 
 .btn__icon {
   font-family: var(--token-font-icon);
-  font-size: 16px;
+  font-size: var(--token-button-icon-size);
   font-weight: 400;
   line-height: 1;
 }
 
 /* ── Standard / Solid ── */
-.btn--solid.btn--default.btn--default        { background: var(--token-action-default); color: var(--token-button-solid-text); }
-.btn--solid.btn--default.btn--default:not(:disabled):hover  { background: var(--token-status-default); }
+.btn--solid.btn--default.btn--default        { background: var(--token-button-solid-fill); color: var(--token-button-solid-text); }
+.btn--solid.btn--default.btn--default:not(:disabled):hover  { background: var(--token-button-solid-hover); }
 .btn--solid.btn--default.btn--disabled       { background: var(--token-action-disabled); color: var(--token-text-disabled); }
 .btn--solid.btn--default.btn--loading        { background: var(--token-action-disabled); color: var(--token-text-default); }
 
 /* ── Standard / Outline ── */
-.btn--outline.btn--default.btn--default       { background: transparent; border-color: var(--token-button-outline-text); color: var(--token-button-outline-text); }
-.btn--outline.btn--default.btn--default:not(:disabled):hover { background: var(--token-action-subtle); }
+.btn--outline.btn--default.btn--default       { background: transparent; border-color: var(--token-button-outline-stroke); color: var(--token-button-outline-text); }
+.btn--outline.btn--default.btn--default:not(:disabled):hover { background: var(--token-button-outline-hover); }
 .btn--outline.btn--default.btn--disabled      { background: transparent; border-color: var(--token-action-disabled); color: var(--token-text-disabled); }
 .btn--outline.btn--default.btn--loading       { background: transparent; border-color: var(--token-action-disabled); color: var(--token-text-default); }
 
 /* ── Standard / Ghost ── */
 .btn--ghost.btn--default.btn--default        { background: transparent; color: var(--token-button-outline-text); }
-.btn--ghost.btn--default.btn--default:not(:disabled):hover  { background: var(--token-action-subtle); }
+.btn--ghost.btn--default.btn--default:not(:disabled):hover  { background: var(--token-button-ghost-hover); }
 .btn--ghost.btn--default.btn--disabled       { color: var(--token-text-disabled); }
 .btn--ghost.btn--default.btn--loading        { color: var(--token-text-default); }
 

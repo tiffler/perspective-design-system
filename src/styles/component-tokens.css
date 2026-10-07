@@ -25,10 +25,12 @@
   --token-action-danger: var(--token-status-danger);
   --token-action-default: var(--primitive-brand-600);
   --token-action-disabled: var(--primitive-neutral-300);
+  --token-action-knob: var(--primitive-neutral-100);
   --token-action-off: var(--primitive-neutral-600);
-  --token-action-prominent: color-mix(in srgb, var(--token-action-default) 80%, transparent);
+  --token-action-prominent: var(--primitive-brand-700);
   --token-action-subtle: color-mix(in srgb, var(--token-action-default) 40%, transparent);
   --token-action-warning: var(--token-status-urgent);
+  --token-action-warning-hover: var(--primitive-orange-600);
   --token-elevation-sm: var(--primitive-shadow-light-sm);
   --token-elevation-xs: var(--primitive-shadow-light-xs);
   --token-status-active: var(--primitive-blue-500);
@@ -69,19 +71,20 @@
   --token-text-on-status-info: var(--primitive-neutral-200);
   --token-text-on-status-success: var(--primitive-neutral-200);
   --token-text-on-status-urgent: var(--primitive-neutral-1600);
+  --token-text-action: var(--primitive-brand-600);
   --token-text-subtle: var(--primitive-neutral-900);
-  --token-text-success: var(--token-status-success);
+  --token-text-success: var(--primitive-green-800);
   --token-text-urgent: var(--primitive-orange-800);
 
   /* ===== components ===== */
   --token-button-content-gap: var(--primitive-space-300);
   --token-button-ghost-hover: var(--token-action-subtle);
-  --token-button-ghost-text: var(--token-action-default);
+  --token-button-ghost-text: var(--token-text-action);
   --token-button-height: var(--token-control-height);
   --token-button-icon-size: var(--token-icon-size-s);
   --token-button-outline-hover: var(--token-action-subtle);
   --token-button-outline-stroke: var(--token-action-default);
-  --token-button-outline-text: var(--token-action-default);
+  --token-button-outline-text: var(--token-text-action);
   --token-button-padding-horizontal: var(--primitive-space-400);
   --token-button-padding-vertical: var(--primitive-space-300);
   --token-button-solid-fill: var(--token-action-default);
@@ -96,7 +99,7 @@
   --token-chip-multi-tone-gap: var(--primitive-space-200);
   --token-chip-multi-tone-padding: var(--primitive-space-300);
   --token-chip-padding-horizontal: var(--primitive-space-300);
-  --token-chip-radius: var(--token-radius-xs);
+  --token-chip-radius: var(--token-control-radius);
   --token-icon-checkbox-indeterminate: "indeterminate_check_box";
   --token-icon-checkbox-selected: "check_box";
   --token-icon-checkbox-unselected: "check_box_outline_blank";
@@ -118,6 +121,7 @@
   --token-input-text-default: var(--token-text-default);
   --token-input-text-label: var(--token-text-subtle);
   --token-input-text-placeholder: var(--token-text-subtle);
+  --token-switch-knob: var(--token-action-knob);
   --token-switch-off: var(--token-action-off);
   --token-textarea-radius: var(--token-radius-md);
 
@@ -148,10 +152,6 @@
   --token-font-icon-brand: var(--primitive-font-icon-brand);
   --token-font-variable-axes: 'FILL' 1;
 
-  /* ===== repo-only (not in Figma yet) ===== */
-  --token-action-warning-hover: color-mix(in srgb, var(--token-action-warning) 85%, black);
-  --token-switch-knob: var(--primitive-neutral-100);
-
 }
 
 /* ── Dark mode: only the values that differ from light ── */
@@ -161,14 +161,16 @@
   --token-action-danger: var(--primitive-red-500);
   --token-action-default: var(--primitive-brand-300);
   --token-action-disabled: var(--primitive-neutral-1300);
+  --token-action-knob: var(--primitive-neutral-200);
   --token-action-off: var(--primitive-neutral-900);
   --token-action-prominent: var(--primitive-brand-200);
   --token-action-subtle: var(--primitive-brand-800);
   --token-action-warning: var(--primitive-orange-400);
+  --token-action-warning-hover: var(--primitive-orange-600);
   --token-elevation-sm: var(--primitive-shadow-dark-sm);
   --token-elevation-xs: var(--primitive-shadow-dark-xs);
   --token-status-active: var(--primitive-blue-600);
-  --token-status-danger: var(--primitive-red-700);
+  --token-status-danger: var(--primitive-red-500);
   --token-status-default: var(--primitive-brand-300);
   --token-status-multi-tone-active: var(--primitive-blue-900);
   --token-status-multi-tone-danger: var(--primitive-red-900);
@@ -193,7 +195,7 @@
   --token-surface-section-inverse: var(--primitive-neutral-200);
   --token-surface-section-subtle: var(--primitive-neutral-1300);
   --token-text-active: var(--primitive-blue-300);
-  --token-text-danger: var(--primitive-red-200);
+  --token-text-danger: var(--primitive-red-100);
   --token-text-default: var(--primitive-neutral-200);
   --token-text-on-action: var(--primitive-neutral-1600);
   --token-text-on-status-active: var(--primitive-neutral-100);
@@ -201,10 +203,8 @@
   --token-text-on-status-default: var(--primitive-neutral-1600);
   --token-text-on-status-info: var(--primitive-neutral-100);
   --token-text-on-status-success: var(--primitive-neutral-100);
+  --token-text-action: var(--primitive-brand-200);
   --token-text-subtle: var(--primitive-neutral-600);
   --token-text-success: var(--primitive-green-500);
   --token-text-urgent: var(--primitive-orange-400);
-
-  /* repo-only */
-  --token-switch-knob: var(--primitive-neutral-200);
 }

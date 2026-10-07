@@ -26,7 +26,7 @@ type Story = StoryObj<typeof meta>;
 
 /** Idle state, ready for multi-line text input. */
 export const Default: Story = {
-  args: { variant: 'default', label: 'Label', placeholder: 'Enter text...' },
+  args: { variant: 'default', label: 'Label', helperText: 'Help text goes here', placeholder: 'Enter text...' },
 };
 
 /** Active state on user interaction. */

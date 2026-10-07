@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
 
 body {
   margin: 0;
@@ -9,4 +9,14 @@ body {
 
 html[data-mode="dark"] {
   color-scheme: dark;
+}
+
+/* Docs pages follow the Theme / Mode toolbar too. */
+.sbdocs.sbdocs-wrapper {
+  background: var(--token-surface-page-default);
+}
+
+.sbdocs.sbdocs-content,
+.sbdocs.sbdocs-content h1 {
+  color: var(--token-text-default);
 }

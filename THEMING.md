@@ -44,7 +44,7 @@ Code names are derived from the Figma variable names by replacing `/` with `-`:
 | Figma | CSS |
 |---|---|
 | `colors/purple/500` | `--primitive-purple-500` (the leading `colors/` is dropped) |
-| `surface/page/default` | `--token-surface-page-default` |
+| `surface/page` | `--token-surface-page-default` (code syntax is set in Figma and wins) |
 | `status/multi-tone/danger` | `--token-status-multi-tone-danger` |
 | `input/stroke/focus` | `--token-input-stroke-focus` |
 
