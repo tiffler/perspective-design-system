@@ -71,12 +71,12 @@
 .chip--running.chip--halftone {
   background: var(--token-status-multi-tone-active);
   color: var(--token-text-active);
-  border-color: var(--token-text-active);
+  border-color: var(--token-status-active);
 }
 .chip--running.chip--outline {
   background: transparent;
   color: var(--token-text-active);
-  border-color: var(--token-text-active);
+  border-color: var(--token-status-active);
 }
 
 /* ── Informational ── */
@@ -103,12 +103,12 @@
 .chip--success.chip--halftone {
   background: var(--token-status-multi-tone-success);
   color: var(--token-text-success);
-  border-color: var(--token-text-success);
+  border-color: var(--token-status-success);
 }
 .chip--success.chip--outline {
   background: transparent;
   color: var(--token-text-success);
-  border-color: var(--token-text-success);
+  border-color: var(--token-status-success);
 }
 
 /* ── Urgent ── */

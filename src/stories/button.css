@@ -42,7 +42,7 @@
 .btn--ghost.btn--default.btn--loading        { color: var(--token-text-default); }
 
 /* ── Destructive / Solid ── */
-.btn--solid.btn--destructive.btn--default       { background: var(--token-action-danger); color: var(--token-button-solid-text); }
+.btn--solid.btn--destructive.btn--default       { background: var(--token-action-danger); color: var(--token-text-on-status-danger); }
 .btn--solid.btn--destructive.btn--default:not(:disabled):hover { background: var(--token-status-danger); }
 
 /* ── Destructive / Outline ── */
