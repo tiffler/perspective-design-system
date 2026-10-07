@@ -27,7 +27,7 @@
   --token-action-disabled: var(--primitive-neutral-300);
   --token-action-knob: var(--primitive-neutral-100);
   --token-action-off: var(--primitive-neutral-600);
-  --token-action-prominent: color-mix(in srgb, var(--token-action-default) 80%, transparent);
+  --token-action-prominent: color-mix(in srgb, var(--token-action-default) 90%, transparent);
   --token-action-subtle: color-mix(in srgb, var(--token-action-default) 40%, transparent);
   --token-action-warning: var(--token-status-urgent);
   --token-action-warning-hover: var(--primitive-orange-600);
