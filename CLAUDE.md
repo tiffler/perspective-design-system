@@ -41,6 +41,8 @@ Three layers, one direction: `primitives.css` -> `component-tokens.css` -> compo
 - `src/styles/component-tokens.css`: `--token-*` names that components use. Values are `var(--primitive-*)` references. Dark mode lives here under `:root[data-mode="dark"]`.
 - Components: use `--token-*` only. Never hardcode hex values and never reference `--primitive-*` directly.
 
+Token documentation lives in Storybook under `Tokens/` (one page per Figma collection). It is driven by `src/tokens/tokens.json`, an export of the Figma variables, so re-export it whenever variables change in Figma.
+
 To see a token's current value, read `component-tokens.css`. Themes are in `src/styles/themes/`; see `THEMING.md`.
 
 Token names are the Figma variable names with `/` -> `-` (`--token-status-multi-tone-danger`, `--token-input-stroke-focus`). Exception: the surface tokens keep a `-default` suffix in code. Figma names them `surface/page`, `surface/card`, `surface/section`, `surface/overlay` (and `-subtle`, `-inverse`), while the code names stay `--token-surface-page-default` and so on. The code syntax set on each Figma variable is the source of truth.

@@ -10,3 +10,13 @@ body {
 html[data-mode="dark"] {
   color-scheme: dark;
 }
+
+/* Docs pages follow the Theme / Mode toolbar too. */
+.sbdocs.sbdocs-wrapper {
+  background: var(--token-surface-page-default);
+}
+
+.sbdocs.sbdocs-content,
+.sbdocs.sbdocs-content h1 {
+  color: var(--token-text-default);
+}
